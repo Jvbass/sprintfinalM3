@@ -120,19 +120,6 @@ LIMIT 3;
 
 -- Cambien la categoría de productos más popular por ‘Electrónica y computación’.
 	-- Se cambia la categoria "Computacion" que en total hay 94 productos en stock por "Electrónica y computación"
- 
-/*
-UPDATE productos
-SET categoria = 'Electrónica y computación'
-WHERE categoria = (
-  SELECT categoria
-  FROM productos 
-  GROUP BY categoria
-  ORDER BY SUM(stock) DESC
-  LIMIT 1
-) ;
-SELECT * FROM productos;
-*/
 
 UPDATE productos set categoria = 'Electrónica y computación'
 WHERE categoria = 
